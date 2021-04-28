@@ -1,2 +1,2 @@
 # dorothy-server
-Authentication token server
+Authentication token server for bridge game
