@@ -1,7 +1,7 @@
 {
 	"name": "dorothy-server",
 	"version": "0.1.0",
-	"description": "routing for / - jbds holding page, /token - twilio auth, /dorothy - client app",
+	"description": "routes for / - jbds holding page, /token - twilio auth, /dorothy - client app",
 	"main": "app.js",
 	"scripts": {},
 	"dependencies": {
