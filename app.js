@@ -16,9 +16,8 @@ function createToken(req) {
 	const identity = urlParameters.identity;
 
 	//test
-	//identity is aka user name eg Jon
+	//identity is aka username_roomname 
 	console.log('tokenID:' + identity);
-	console.log('roomname:' + arr[1]);
 
 	const options = {};
 	if (typeof urlParameters.ttl === 'string') {
