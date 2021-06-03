@@ -12,23 +12,25 @@ app.use(express.static('public'));
 
 // start of token handling 
 function createToken(req) {
-  const urlParameters = req.query;
-  const identity = urlParameters.identity;
+	const urlParameters = req.query;
+	const identity = urlParameters.identity;
 
-  //identity is aka user name eg Jon
-  //console.log('tokenID:' + identity);
+	//test
+	//identity is aka user name eg Jon
+	console.log('tokenID:' + identity);
+	console.log('roomname:' + arr[1]);
 
-  const options = {};
-  if (typeof urlParameters.ttl === 'string') {
-    options.ttl = parseInt(urlParameters.ttl);
-  }
+	const options = {};
+	if (typeof urlParameters.ttl === 'string') {
+		options.ttl = parseInt(urlParameters.ttl);
+	}
 
-  return createAccessToken(identity, options);
+	return createAccessToken(identity, options);
 }
 
 function handleAccessTokenRequest(req, res) {
-  res.set('Content-Type', 'text/plain');
-  res.send(createToken(req));
+	res.set('Content-Type', 'text/plain');
+	res.send(createToken(req));
 }
 
 app.get('/token', handleAccessTokenRequest);
@@ -66,4 +68,9 @@ app.get('/', (req, res) => {
 	`);
 });
 
-app.listen();
+// production
+//app.listen();
+// test local
+app.listen(9000, () => {
+	console.log(`Server listening on port 9000`)
+});

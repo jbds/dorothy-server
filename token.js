@@ -4,6 +4,8 @@ const { AccessToken } = require('twilio');
 
 function createAccessToken(identity, options) {
   options = options || {};
+  // we want to extract the room name
+  const arr = identity.split('_');
 
   // found environment variables mismatch - add TWILIO prefix
   //console.log('AccountSid=' + process.env.TWILIO_ACCOUNT_SID)
