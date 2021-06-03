@@ -11,8 +11,8 @@ function createAccessToken(identity, options) {
   const room2 = (process.env.DOROTHY_ROOM_2).toUpperCase();
   const room3 = (process.env.DOROTHY_ROOM_3).toUpperCase();
 
-  console.log('roomname:' + roomname);
-  console.log('room2:' + room2);
+  //console.log('roomname:' + roomname);
+  //console.log('room2:' + room2);
 
   if (!(roomname === room1 || roomname === room2 || roomname === room3)) {
     // room is not validated, so abort and return error
